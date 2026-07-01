@@ -1,5 +1,6 @@
 import "./Home.css";
 import ChatCard from "./components/ChatCard";
+import { Link } from "react-router-dom";  
 
 interface ChatRoom {
   id: number;
@@ -39,7 +40,9 @@ export default function Home() {
       <h1 className="home-title">Home</h1>
       <div className="chat-rooms-container">
         {mockChatRooms.map((chatRoom) => (
-          <ChatCard id={chatRoom.id} title={chatRoom.name} creator={chatRoom.creator} currentUsers={chatRoom.currentUsers} maxUsers={chatRoom.maxUsers} />
+          <Link key = {chatRoom.id} to={`/chatroom/${chatRoom.id}`} style={{textDecoration: 'none', color: 'inherit'}}>
+            <ChatCard id={chatRoom.id} title={chatRoom.name} creator={chatRoom.creator} currentUsers={chatRoom.currentUsers} maxUsers={chatRoom.maxUsers} />
+          </Link>
         ))}
       </div>
 
