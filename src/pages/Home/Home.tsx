@@ -1,6 +1,7 @@
 import "./Home.css";
 import ChatCard from "./components/ChatCard";
 import { Link } from "react-router-dom";  
+import { useTranslation } from "react-i18next";
 
 interface ChatRoom {
   id: number;
@@ -12,6 +13,7 @@ interface ChatRoom {
 
 
 export default function Home() {
+  const { t } = useTranslation();
   const mockChatRooms : ChatRoom[] = [
     {
       id: 1,
@@ -37,7 +39,7 @@ export default function Home() {
   ];
   return (
     <div className="home-container">
-      <h1 className="home-title">Home</h1>
+      <h1 className="home-title">{t('homeTitle')}</h1>
       <div className="chat-rooms-container">
         {mockChatRooms.map((chatRoom) => (
           <Link key = {chatRoom.id} to={`/chatroom/${chatRoom.id}`} style={{textDecoration: 'none', color: 'inherit'}}>
