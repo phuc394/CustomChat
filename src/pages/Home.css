@@ -1,0 +1,24 @@
+.home-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Phần cốt lõi để dàn hàng ngang và cách đều */
+.chat-rooms-container {
+  display: flex;
+  flex-direction: row; /* Xếp theo hàng ngang */
+  flex-wrap: wrap;     /* Tự động rớt dòng nếu màn hình quá nhỏ */
+  justify-content: space-evenly; /* Cách đều các card sang 2 bên lề */
+  align-items: center;
+  gap: 16px;     /* Khoảng cách tối thiểu giữa các card */
+}
