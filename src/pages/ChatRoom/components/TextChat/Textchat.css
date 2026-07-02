@@ -1,0 +1,27 @@
+.text-chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.text-chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.text-chat-user, .text-chat-timestamp {
+    font-size: 14px;
+    color: #323232;
+}
+
+.text-chat-message {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
