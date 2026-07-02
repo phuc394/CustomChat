@@ -1,4 +1,4 @@
-import "./TextChat.css";
+import "./Textchat.css";
 
 
 interface TextChatProps {
